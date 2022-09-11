@@ -1,0 +1,15 @@
+
+    <nav class="navbar navbar-light bg-info">
+      <a class="navbar-brand" href="/">
+        <img src="/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+        Shillong Morning Teer
+      </a>
+      <%if(currentUser){%>
+        <li><a href="/admin/logout" class="text-white">Logout </a></li>
+       <%}%>
+        
+    
+    </nav>
+</header>
+
+<%- include(`./message`) %>
