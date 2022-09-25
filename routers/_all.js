@@ -15,6 +15,7 @@ const predictTargetRoute = require(`./predictTaregt`);
 const morningResultRoute = require(`./PreviousResult/MorningTeerResult`);
 const eveningTeerResultRoute = require(`./PreviousResult/EveningTeerResult`);
 const noonTeerResultRoute = require(`./PreviousResult/NoonTeerResult`);
+const headingRoutes =require(`./heading`);
 
 router.use(`/admin`, adminRoutes);
 router.use(`/`, indexRoutes);
@@ -30,5 +31,6 @@ router.use(`/predicttarget`, predictTargetRoute);
 router.use(`/morningteerresult`, morningResultRoute);
 router.use(`/eveningteerresult`, eveningTeerResultRoute);
 router.use(`/noonteerresult`, noonTeerResultRoute);
+router.use(`/heading`, headingRoutes);
 
 module.exports = router;

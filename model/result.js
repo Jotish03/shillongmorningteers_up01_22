@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const resultSchema = mongoose.Schema({
+
     round1:{
         result:{
             type:String

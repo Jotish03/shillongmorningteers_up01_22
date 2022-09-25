@@ -1,11 +1,16 @@
 const express = require('express'),
-      router = express.Router();
-      Result = require('../model/result')
+      router = express.Router(),
+      Result = require('../model/result'),
+      Heading = require('../model/heading');
+
 router.get('/', async (req, res) => {
       
     try {
         const result=await Result.find()
-        res.render('Home',{result, docTitle: `Home`})
+        const heading=await Heading.findOne({})
+        console.log(heading)
+        
+        res.render('Home',{result,heading, docTitle: `Home`})
     } catch (err) {
         req.flash(
             'error_msg',

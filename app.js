@@ -21,9 +21,6 @@ let dbNameToUse = `shillongmorningteersDBAug`,
 if (process.env.MODE && process.env.MODE.toLowerCase().trim() === `prod`) {
   (dbNameToUse = `shillongmorningteersDBAug`),
     (dbURLToUse = `mongodb+srv://shillongteers22:Shillong@2022@cluster0.y2v8ck2.mongodb.net/?retryWrites=true&w=majority`);
-} else {
-  (dbNameToUse = `shillongmorningteersDBAug`),
-  (dbURLToUse = `mongodb://127.0.0.1:27017`);
 }
 
 mongoose.set(`runValidators`, true); // to run validate operators on update operations too
